@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Empanadas Al toque — Sabor de tradición</title>
 
@@ -12,28 +12,32 @@
   --terr:#c84f27;
   --maiz:#e8ad28;
   --brown:#382015;
-  --green:#177a43
+  --green:#177a43;
 }
 
 *{
-  box-sizing:border-box
+  box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth
+  scroll-behavior:smooth;
 }
 
 body{
   margin:0;
   font-family:Arial,sans-serif;
   background:var(--cream);
-  color:var(--brown)
+  color:var(--brown);
 }
 
 a{
   text-decoration:none;
-  color:inherit
+  color:inherit;
 }
+
+/* =========================
+   NAVEGACIÓN
+========================= */
 
 .nav{
   position:sticky;
@@ -45,20 +49,20 @@ a{
   justify-content:space-between;
   align-items:center;
   padding:14px 6%;
-  border-bottom:1px solid #ead8bb
+  border-bottom:1px solid #ead8bb;
 }
 
 .brand{
   font-weight:900;
   font-size:24px;
-  color:var(--terr)
+  color:var(--terr);
 }
 
 .navlinks{
   display:flex;
   gap:22px;
   font-size:14px;
-  font-weight:700
+  font-weight:700;
 }
 
 .wa,
@@ -67,8 +71,12 @@ a{
   color:white;
   padding:11px 17px;
   border-radius:999px;
-  font-weight:800
+  font-weight:800;
 }
+
+/* =========================
+   PORTADA
+========================= */
 
 .hero{
   min-height:82vh;
@@ -77,73 +85,88 @@ a{
   align-items:center;
   gap:35px;
   padding:65px 7%;
-  background:var(--cream)
+  background:var(--cream);
 }
 
 .eyebrow{
   color:var(--terr);
   font-weight:900;
   text-transform:uppercase;
-  letter-spacing:2px
+  letter-spacing:2px;
 }
 
 .hero h1{
   font-family:Georgia,serif;
   font-size:clamp(52px,7vw,96px);
   line-height:.9;
-  margin:14px 0
+  margin:14px 0;
 }
 
 .script{
   color:var(--terr);
-  font-style:italic
+  font-style:italic;
 }
 
 .lead{
   font-size:21px;
   max-width:520px;
-  line-height:1.5
+  line-height:1.5;
 }
 
 .buttons{
   display:flex;
   gap:14px;
   flex-wrap:wrap;
-  margin:28px 0
+  margin:28px 0;
 }
 
 .btn{
   display:inline-block;
   padding:15px 22px;
   border-radius:999px;
-  font-weight:900
+  font-weight:900;
 }
 
 .secondary{
-  border:2px solid var(--brown)
+  border:2px solid var(--brown);
 }
 
-.food{
+/* =========================
+   COLLAGE DE PORTADA
+========================= */
+
+.hero-image{
   height:470px;
-  border-radius:42% 42% 25% 25%;
-  background:linear-gradient(145deg,#d87527,#f2b63a);
+  border-radius:35px;
+  overflow:hidden;
   box-shadow:20px 24px 0 #c84f2733;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:100px;
-  transform:rotate(3deg)
+  background:#ead7b8;
 }
+
+.hero-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* =========================
+   SECCIONES
+========================= */
 
 section{
-  padding:75px 7%
+  padding:75px 7%;
 }
+
+/* =========================
+   HISTORIA
+========================= */
 
 .story{
   display:grid;
   grid-template-columns:.8fr 1.2fr;
   gap:50px;
-  align-items:center
+  align-items:center;
 }
 
 .badge{
@@ -151,7 +174,7 @@ section{
   padding:28px;
   border-radius:25px;
   font-size:54px;
-  text-align:center
+  text-align:center;
 }
 
 .story h2,
@@ -160,8 +183,12 @@ section{
 .visit h2{
   font-family:Georgia,serif;
   font-size:48px;
-  margin:0 0 15px
+  margin:0 0 15px;
 }
+
+/* =========================
+   PASTEL DE YUCA
+========================= */
 
 .featured{
   background:var(--terr);
@@ -169,12 +196,12 @@ section{
   display:grid;
   grid-template-columns:1fr 1fr;
   align-items:center;
-  gap:30px
+  gap:30px;
 }
 
 .featured h2{
   font-size:54px;
-  margin:0
+  margin:0;
 }
 
 .price{
@@ -183,36 +210,90 @@ section{
   color:var(--brown);
   padding:8px 14px;
   border-radius:999px;
-  font-weight:900
+  font-weight:900;
 }
 
-.featuredfood{
-  font-size:170px;
-  text-align:center
+/* FOTOS DE LOS PASTELES */
+
+.pastel-gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
 }
+
+.pastel-gallery img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  border-radius:26px;
+  box-shadow:12px 14px 0 #7e2e1f55;
+}
+
+/* =========================
+   SECCIÓN EMPANADAS
+========================= */
+
+.empanadas-section{
+  background:#fffaf0;
+  padding-top:45px;
+  padding-bottom:45px;
+}
+
+.empanadas-section h2{
+  font-family:Georgia,serif;
+  font-size:48px;
+  margin:0 0 15px;
+}
+
+.empanadas-section p{
+  max-width:700px;
+  font-size:18px;
+  line-height:1.5;
+}
+
+/* Fotos de empanadas */
+
+.empanadas-gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:30px;
+}
+
+.empanadas-gallery img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  border-radius:26px;
+  box-shadow:12px 14px 0 #7e2e1f55;
+}
+
+/* =========================
+   MENÚ
+========================= */
 
 .menu{
-  background:#fffaf0
+  background:#fffaf0;
 }
 
 .cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
-  margin-top:30px
+  margin-top:30px;
 }
 
 .card{
   background:#fff1d4;
   border:1px solid #e8d3ae;
   border-radius:22px;
-  padding:25px
+  padding:25px;
 }
 
 .card h3{
   margin-top:0;
   color:var(--terr);
-  font-size:22px
+  font-size:22px;
 }
 
 .item{
@@ -220,29 +301,33 @@ section{
   justify-content:space-between;
   gap:12px;
   padding:9px 0;
-  border-bottom:1px dashed #d8bea0
+  border-bottom:1px dashed #d8bea0;
 }
+
+/* =========================
+   CÓMO PEDIR
+========================= */
 
 .how{
   background:var(--brown);
-  color:#fff5df
+  color:#fff5df;
 }
 
 .steps{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:18px
+  gap:18px;
 }
 
 .step{
   padding:25px;
   border:1px solid #765546;
-  border-radius:20px
+  border-radius:20px;
 }
 
 .step b{
   font-size:32px;
-  color:var(--maiz)
+  color:var(--maiz);
 }
 
 .order{
@@ -250,13 +335,17 @@ section{
   background:#fff1d4;
   color:var(--brown);
   padding:22px;
-  border-radius:18px
+  border-radius:18px;
 }
+
+/* =========================
+   VISÍTANOS
+========================= */
 
 .visit{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:35px
+  gap:35px;
 }
 
 .map{
@@ -267,124 +356,110 @@ section{
   place-items:center;
   font-size:22px;
   font-weight:900;
-  text-align:center
+  text-align:center;
 }
+
+/* =========================
+   FINAL
+========================= */
 
 .final{
   text-align:center;
   background:var(--maiz);
-  padding:65px 7%
+  padding:65px 7%;
 }
 
 .final h2{
   font-family:Georgia,serif;
   font-size:54px;
-  margin:0 0 12px
+  margin:0 0 12px;
 }
 
 .phone{
   font-size:35px;
-  font-weight:900
+  font-weight:900;
 }
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
 
 .footer{
   padding:22px;
   text-align:center;
   font-size:13px;
   background:#25150f;
-  color:#fbeed5
+  color:#fbeed5;
 }
 
-/* GALERÍAS DE FOTOS */
-.pastel-gallery{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px
-}
-
-.pastel-gallery img{
-  width:100%;
-  height:360px;
-  object-fit:cover;
-  border-radius:26px;
-  box-shadow:12px 14px 0 #7e2e1f55
-}
-
-/* GALERÍA DE EMPANADAS */
-.empanada-gallery{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-  margin-top:30px
-}
-
-.empanada-gallery img{
-  width:100%;
-  height:360px;
-  object-fit:cover;
-  border-radius:26px;
-  box-shadow:12px 14px 0 #7e2e1f55
-}
+/* =========================
+   CELULARES
+========================= */
 
 @media(max-width:800px){
 
   .navlinks{
-    display:none
+    display:none;
   }
 
   .hero,
   .story,
   .featured,
   .visit{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .hero{
-    padding-top:45px
+    padding-top:45px;
   }
 
-  .food{
-    height:300px
+  .hero-image{
+    height:350px;
   }
 
   .cards,
   .steps{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .story h2,
   .menu h2,
   .how h2,
-  .visit h2{
-    font-size:38px
+  .visit h2,
+  .empanadas-section h2{
+    font-size:38px;
   }
 
   .featured h2{
-    font-size:42px
+    font-size:42px;
   }
 
   .final h2{
-    font-size:42px
+    font-size:42px;
   }
 
   .phone{
-    font-size:26px
+    font-size:26px;
   }
 
   .pastel-gallery,
-  .empanada-gallery{
-    grid-template-columns:1fr
+  .empanadas-gallery{
+    grid-template-columns:1fr;
   }
 
   .pastel-gallery img,
-  .empanada-gallery img{
-    height:300px
+  .empanadas-gallery img{
+    height:300px;
   }
 }
 </style>
 </head>
 
 <body>
+
+<!-- =========================
+     NAVEGACIÓN
+========================= -->
 
 <nav class="nav">
 
@@ -407,6 +482,10 @@ section{
 
 </nav>
 
+
+<!-- =========================
+     PORTADA
+========================= -->
 
 <header class="hero">
 
@@ -435,29 +514,47 @@ section{
         🥟 Pedir por WhatsApp
       </a>
 
-      <a class="btn secondary" href="#visitanos">
+      <a
+        class="btn secondary"
+        href="#visitanos"
+      >
         📍 Cómo llegar
       </a>
 
     </div>
 
     <p>
-      🍽️ Para comer aquí · 🛍️ Para llevar · 🚫 No hacemos domicilios
+      🍽️ Para comer aquí ·
+      🛍️ Para llevar ·
+      🚫 No hacemos domicilios
     </p>
 
   </div>
 
-  <div class="food">
-    🥟🥟
+
+  <!-- COLLAGE PRINCIPAL -->
+
+  <div class="hero-image">
+
+    <img
+      src="images/collage-empanadas-al-toque-reales.jpg"
+      alt="Collage de empanadas y pasteles de Empanadas Al toque"
+    >
+
   </div>
 
 </header>
 
 
+<!-- =========================
+     HISTORIA
+========================= -->
+
 <section id="historia" class="story">
 
   <div class="badge">
-    🏡<br>
+    🏡
+    <br>
     <small>
       25 años<br>
       de tradición
@@ -483,7 +580,9 @@ section{
 </section>
 
 
-<!-- PASTEL DE YUCA -->
+<!-- =========================
+     PASTEL DE YUCA
+========================= -->
 
 <section class="featured">
 
@@ -512,6 +611,8 @@ section{
   </div>
 
 
+  <!-- AQUÍ VAN SOLAMENTE LAS FOTOS DE LOS PASTELES -->
+
   <div class="pastel-gallery">
 
     <img
@@ -529,34 +630,33 @@ section{
 </section>
 
 
-<!-- EMPANADAS -->
+<!-- =========================
+     EMPANADAS
+========================= -->
 
-<section class="menu" style="padding-top:45px;padding-bottom:45px">
+<section class="empanadas-section">
 
   <h2>
     Así se ven nuestras empanadas
   </h2>
 
-  <p style="max-width:700px;font-size:18px;line-height:1.5">
-
-    Hechas con harina de trigo, doradas al momento y con el borde marcado a mano.
-    Tenemos empanadas semicirculares y cuadradas.
-
+  <p>
+    Hechas con harina de trigo, doradas al momento y con el borde marcado a mano. Tenemos empanadas semicirculares y cuadradas.
   </p>
 
 
-  <div class="empanada-gallery">
+  <!-- AQUÍ VAN SOLAMENTE LAS EMPANADAS -->
 
-    <!-- EMPANADA CIRCULAR / SEMICIRCULAR -->
+  <div class="empanadas-gallery">
+
     <img
       src="images/empanada-semicircular.jpeg"
-      alt="Empanada semicircular de Empanadas Al toque"
+      alt="Empanadas semicirculares de Empanadas Al toque"
     >
 
-    <!-- EMPANADA CUADRADA -->
     <img
       src="images/empanada-cuadrada.jpeg"
-      alt="Empanada cuadrada de Empanadas Al toque"
+      alt="Empanadas cuadradas de Empanadas Al toque"
     >
 
   </div>
@@ -564,7 +664,9 @@ section{
 </section>
 
 
-<!-- MENÚ -->
+<!-- =========================
+     MENÚ
+========================= -->
 
 <section id="menu" class="menu">
 
@@ -574,6 +676,9 @@ section{
 
   <div class="cards">
 
+
+    <!-- EMPANADAS -->
+
     <div class="card">
 
       <h3>
@@ -581,27 +686,29 @@ section{
       </h3>
 
       <div class="item">
-        Carne arroz
+        <span>Carne arroz</span>
       </div>
 
       <div class="item">
-        Pollo arroz
+        <span>Arroz pollo</span>
       </div>
 
       <div class="item">
-        Papa criolla con carne desmechada
+        <span>Papa criolla con carne desmechada</span>
       </div>
 
       <div class="item">
-        Ranchera
+        <span>Ranchera</span>
       </div>
 
       <div class="item">
-        Hawaiana
+        <span>Hawaiana</span>
       </div>
 
     </div>
 
+
+    <!-- OTROS PRODUCTOS -->
 
     <div class="card">
 
@@ -610,17 +717,19 @@ section{
       </h3>
 
       <div class="item">
-        Pastel de yuca
+        <span>Pastel de yuca</span>
         <b>$3.300</b>
       </div>
 
       <div class="item">
-        Papa rellena
+        <span>Papa rellena</span>
         <b>$3.300</b>
       </div>
 
     </div>
 
+
+    <!-- BEBIDAS -->
 
     <div class="card">
 
@@ -629,47 +738,47 @@ section{
       </h3>
 
       <div class="item">
-        Tinto / aromática
+        <span>Tinto / aromática</span>
         <b>$1.500</b>
       </div>
 
       <div class="item">
-        Perico
+        <span>Perico</span>
         <b>$1.800</b>
       </div>
 
       <div class="item">
-        Hit 300 ml
+        <span>Hit 300 ml</span>
         <b>$2.500</b>
       </div>
 
       <div class="item">
-        Hit 500 ml
+        <span>Hit 500 ml</span>
         <b>$3.000</b>
       </div>
 
       <div class="item">
-        Gaseosa 237 ml
+        <span>Gaseosa 237 ml</span>
         <b>$2.000</b>
       </div>
 
       <div class="item">
-        Gaseosa 350 ml
+        <span>Gaseosa 350 ml</span>
         <b>$3.000</b>
       </div>
 
       <div class="item">
-        Gaseosa 1 L
+        <span>Gaseosa 1 L</span>
         <b>$4.500</b>
       </div>
 
       <div class="item">
-        Gaseosa 1.5 L
+        <span>Gaseosa 1.5 L</span>
         <b>$6.500</b>
       </div>
 
       <div class="item">
-        Gaseosa 3 L
+        <span>Gaseosa 3 L</span>
         <b>$11.500</b>
       </div>
 
@@ -680,7 +789,9 @@ section{
 </section>
 
 
-<!-- CÓMO PEDIR -->
+<!-- =========================
+     CÓMO PEDIR
+========================= -->
 
 <section class="how">
 
@@ -741,14 +852,16 @@ section{
 
     <b>¿Pedido grande?</b>
 
-    Solicítalo con mínimo 2 dias de anticipación y requiere un anticipo del 50%.
+    Solicítalo con mínimo 1 día de anticipación y requiere un anticipo del 50%.
 
   </div>
 
 </section>
 
 
-<!-- VISÍTANOS -->
+<!-- =========================
+     VISÍTANOS
+========================= -->
 
 <section id="visitanos" class="visit">
 
@@ -759,18 +872,19 @@ section{
     </h2>
 
     <p>
-      <b>📍 Calle 11 #6-28, Cota</b><br>
+      <b>📍 Calle 11 #6-28, Cota</b>
+      <br>
       Frente al Parque V Centenario
     </p>
 
     <p>
-      <b>🕣 Lunes a sábado</b><br>
+      <b>🕣 Lunes a sábado</b>
+      <br>
       Desde las 8:30 a. m. hasta agotar inventario.
     </p>
 
     <p>
-      La disponibilidad cambia durante el día.
-      Escríbenos por WhatsApp antes de venir.
+      La disponibilidad cambia durante el día. Escríbenos por WhatsApp antes de venir.
     </p>
 
     <p>
@@ -790,7 +904,9 @@ section{
 
   <div class="map">
 
-    📍 Parque V Centenario<br>
+    📍 Parque V Centenario
+
+    <br>
 
     <small>
       Calle 11 #6-28, Cota
@@ -801,7 +917,9 @@ section{
 </section>
 
 
-<!-- FINAL -->
+<!-- =========================
+     LLAMADO FINAL
+========================= -->
 
 <section class="final">
 
@@ -830,6 +948,10 @@ section{
 
 </section>
 
+
+<!-- =========================
+     PIE DE PÁGINA
+========================= -->
 
 <footer class="footer">
 
